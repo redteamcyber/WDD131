@@ -1,0 +1,40 @@
+h1,h2,ol{
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.5px solid #006EB6;
+    color: #006EB6;
+    display: inline-block;
+}
+
+#italics-text{
+    font-style: italic;
+    text-align: left; /* Aligns the text content to the left */
+    align-self: flex-start; /* Overrides the parent's alignment and moves the element to the left */
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+#mission{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img{
+    height: 10em;
+    width: 10em;
+    align-self: center;
+}
+
