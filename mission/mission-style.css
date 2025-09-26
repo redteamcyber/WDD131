@@ -38,3 +38,9 @@ img{
     align-self: center;
 }
 
+#mode-select{
+    display: flex;
+    justify-self: center;
+    margin: 20px;
+}
+
