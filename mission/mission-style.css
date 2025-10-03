@@ -13,16 +13,22 @@ h2{
 
 #italics-text{
     font-style: italic;
-    text-align: left; /* Aligns the text content to the left */
-    align-self: flex-start; /* Overrides the parent's alignment and moves the element to the left */
+    text-align: left;
+    align-self: flex-start; 
+}
+
+p{
+    font-size: 20px;
 }
 
 body{
     display: flex;
+    justify-self: center;
     justify-content: center;
-    align-items: center;
     margin: 0;
     min-height: 100vh;
+    border: gray 1px solid;
+    width: 80%;
 }
 
 #mission{
@@ -33,9 +39,8 @@ body{
 }
 
 img{
-    height: 10em;
-    width: 10em;
-    align-self: center;
+    width: 122px;
+    height: 75px;
 }
 
 #mode-select{
@@ -43,4 +48,15 @@ img{
     justify-self: center;
     margin: 20px;
 }
+
+li{
+    padding: 10px;
+    font-size: 20px;
+}
+
+ol{
+    text-align: left;
+}
+
+
 
