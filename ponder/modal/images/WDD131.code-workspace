@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../wdd130"
+		},
+		{
+			"path": "../../../../ITM101"
+		},
+		{
+			"path": "../../../../../../../Documents"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WDD131"
+	}
+}
