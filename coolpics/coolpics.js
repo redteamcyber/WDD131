@@ -2,23 +2,42 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector("#menuButton");
   const nav = document.querySelector("nav");
 
-  // Toggle nav visibility when button is clicked
   menuButton.addEventListener("click", () => {
     nav.classList.toggle("show");
   });
 
-  // Optional: handle window resizing
+
   function handleResize() {
     if (window.innerWidth >= 1000) {
-      nav.classList.add("show"); // always show on large screens
+      nav.classList.add("show");
     } else {
-      nav.classList.remove("show"); // hide on small screens
+      nav.classList.remove("show");
     }
   }
-
-  // Run once when the page loads
   handleResize();
-
-  // Recheck when the window is resized
   window.addEventListener("resize", handleResize);
+});
+
+const images = document.querySelectorAll(".gallery img");
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+    const dialog = document.createElement("dialog");
+    dialog.classList.add("viewer");
+
+    dialog.innerHTML = `
+      <img src="${img.src}" alt="${img.alt}">
+      <button class="close-viewer">X</button>
+    `;
+
+    document.body.appendChild(dialog);
+
+    dialog.showModal();
+
+    const closeButton = dialog.querySelector(".close-viewer");
+    closeButton.addEventListener("click", () => {
+      dialog.close();
+      dialog.remove(); 
+    });
+  });
 });
