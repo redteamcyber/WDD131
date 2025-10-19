@@ -1,0 +1,66 @@
+body{
+    background-color: #808782;
+}
+
+header{
+    background-color: #2B603E;
+    height: 100px;
+    border: 3px solid #6F1D30;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    padding-top: 25px;
+}
+
+nav{
+    background-color: #54544F;
+    text-align: right;
+    height: 25px;
+}
+
+ul{
+    margin-right: 80px;
+}
+
+nav a{
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: 20px;
+}
+
+#book-info{
+    text-align: right;
+}
+
+#magyk-info{
+    padding-top: 30px;
+}
+
+#sword-info{
+    padding-top: 300px;
+}
+
+#books{
+    border-left: 3px solid #6F1D30;
+    margin: 20px;
+    padding-left: 100px;
+    text-align: center;
+}
+
+#books img{
+    display: block;
+    margin: 0 auto;
+}
+
+#filters{
+    border: 3px solid #6F1D30;
+    margin: 20px;
+}
