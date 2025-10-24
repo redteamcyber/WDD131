@@ -34,3 +34,10 @@ const fruits = ["watermelon", "peach", "apple", "tomato", "grape"]
 constLength = words.filter(function(word) {
     return word.length < 6;
 });
+
+// indexOf
+
+const numbers = [12, 34, 21, 54]
+const luckyNumber = 21
+let luckyIndex = numbers.indexOf(luckyNumber)
+
