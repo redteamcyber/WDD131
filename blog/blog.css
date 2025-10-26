@@ -8,11 +8,7 @@ header{
     border: 3px solid #6F1D30;
 }
 
-h1{
-    color: white;
-    text-align: center;
-    padding-top: 25px;
-}
+
 
 nav{
     background-color: #54544F;
@@ -30,37 +26,60 @@ nav a{
     margin-bottom: 20px;
 }
 
-main{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    margin: 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f5f5f5;
 }
 
-#book-info{
-    text-align: right;
+header {
+  background-color: #3f51b5;
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-#magyk-info{
-    padding-top: 30px;
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
-#sword-info{
-    padding-top: 300px;
+#book-info, #books, #filters {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
-#books{
-    border-left: 3px solid #6F1D30;
-    margin: 20px;
-    padding-left: 100px;
-    text-align: center;
+#books {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#books img{
-    display: block;
-    margin: 0 auto;
+.book-card {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-#filters{
-    border: 3px solid #6F1D30;
-    margin: 20px;
+.book-card img {
+  width: 50%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+#book-info {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+#filters {
+  flex: 1;
+  margin-left: 1rem;
 }
