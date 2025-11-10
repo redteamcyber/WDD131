@@ -7,7 +7,6 @@ const aCourse = {
   ],
 
   changeEnrollment: function (sectionNum, add = true) {
-    // find the right section...Array.findIndex will work here
     const sectionIndex = this.sections.findIndex(
       (section) => section.sectionNum == sectionNum
     );
@@ -17,11 +16,10 @@ const aCourse = {
       } else {
         this.sections[sectionIndex].enrolled--;
       }
-      createSections(this.sections); // ✅ corrected from renderSections
+      createSections(this.sections);
     }
   }
-}; // ✅ closes the object
-
+}; 
 function createHeader(course) {
   const nameEl = document.querySelector("#courseName");
   const codeEl = document.querySelector("#courseCode");
@@ -45,7 +43,6 @@ function createSections(sections) {
   sectionsElement.innerHTML = html.join("");
 }
 
-// ✅ Define clickHandler so your buttons work
 function clickHandler(event) {
   const sectionNum = parseInt(document.querySelector("#sectionNumber").value);
   if (event.target.id === "enrollStudent") {
