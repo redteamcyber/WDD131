@@ -41,7 +41,8 @@ margin-top: 50px;
     }
 
     .gallery > .media-card{ 
-        flex: 0 0 45%;
+        flex: 0 0 45%; /* flex-grow, flex-shrink, flex-basis (
+        starting size) */
         display: flex;
         align-items: center;
     }

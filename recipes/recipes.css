@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap');
+
+
+header{
+    font-family: "Caveat", sans-serif;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    height: 100px;
+    width: 100px;
+}
+
+header p{
+    font-size: 3em;
+    align-self: flex-end;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#search{
+    height: 20px;
+    width: 20px;
+    border: 0.5px solid black;
+}
+
+img{
+    width: 100%;
+}
+
+.crisp{
+    border: 3px solid black;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    justify-self: center;
+    justify-content: center; /* centers horizontally */
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+#crisp{
+    height: 150px;
+    width: 200px;
+    align-self: center;
+}
+
+.crisp p{
+    margin-left: 20px;
+}
+
+.label{
+    border: 2px darkgray solid;
+    width: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.title{
+    color: steelblue;
+}
+
+footer {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    margin-bottom: 10px; 
+}
+
+.social img {
+    height: 50px;
+    width: 50px;
+}
+
+#flaticon {
+    font-size: 0.8em;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 600px){
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px; /* space between search form and cards */
+    }
+
+    .recipe-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    main {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
