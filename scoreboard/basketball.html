@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Scoreboard</title>
+    <link rel="stylesheet" href="scoreboard.css">
+    <script src="scoreboard.js" defer></script>
+</head>
+<header>
+    <h1>SCORE HUB</h1>
+    <img src="wireframes/scoreboardlogo.jpg" alt="scoreboard logo">
+</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="basketball.html">Basketball</a>
+        <a href="football.html">Football</a>
+    </nav>
+<body>
+    <div id="basketball-scoreboard">
+        <section id="home-poss-bonus">
+            <div class="indicator-group">
+                <p>POSS</p>
+                <div class="possession"></div>
+            </div>
+            <div class="indicator-group">
+                <p>BONUS</p>
+                <div class="bonus"></div>
+            </div>
+        </section>
+
+        <section id="game-clock-basketball">
+            <div id="timer">08:00</div>
+        </section>
+
+        <section id="away-poss-bonus">
+            <div class="indicator-group">
+                <p>POSS</p>
+                <div class="possession"></div>
+            </div>
+            <div class="indicator-group">
+                <p>BONUS</p>
+                <div class="bonus"></div>
+            </div>
+        </section>
+
+        <section id="home-score-team">
+            <p class="team-label">HOME</p>
+            <div class="score">10</div>
+        </section>
+
+        <section id="game-period-basketball">
+            <p class="period-label">PERIOD</p>
+            <div id="period-number">1</div>
+        </section>
+
+        <section id="away-score-team">
+            <p class="team-label">GUEST</p>
+            <div class="score">10</div>
+        </section>
+    </div>
+    <div id="buttons-basketball">
+        <button id="start-clock-2">START CLOCK</button>
+        <button id="possession-2">POSSESSION</button>
+        <button id="score-one-home">HOME +1</button>
+        <button id="score-two-home">HOME +2</button>
+        <button id="score-three-home">HOME +3</button>
+        <button id="add-bonus-home">HOME BONUS</button>
+        <button id="score-one-away">AWAY +1</button>
+        <button id="score-two-away">AWAY +2</button>
+        <button id="score-three-away">AWAY +3</button>
+        <button id="add-bonus-away">AWAY BONUS</button>
+        <button id="reset-2">RESET</button>
+    </div>
+</body>
+</html>

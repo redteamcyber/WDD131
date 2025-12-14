@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Scoreboard</title>
+    <link rel="stylesheet" href="scoreboard.css">
+    <script src="scoreboard.js" defer></script>
+</head>
+<header>
+    <h1>SCORE HUB</h1>
+    <img src="wireframes/scoreboardlogo.jpg" alt="scoreboard logo">
+</header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="basketball.html">Basketball</a>
+        <a href="football.html">Football</a>
+    </nav>
+<body>
+    <div id="football-scoreboard">
+        
+        <section id="game-clock-football">
+            <section id="timer">
+                12:00 </section>
+        </section>
+        
+        <section id="home-score-team">
+            <p class="team-label">HOME</p>
+            <section class="score">14</section>
+        </section>
+        
+        <section id="game-period-football">
+            <p class="period-label">PERIOD</p>
+            <section id="period-number-football">1</section>
+        </section>
+        
+        <section id="away-score-team">
+            <p class="team-label">GUEST</p>
+            <section class="score">07</section>
+        </section>
+        
+        <div id="down-yards-container">
+            <section id="down">
+                <p>DOWN</p>
+                <section id="down-count">1</section>
+            </section>
+            <section id="yards-to-go">
+                <p>TO GO</p>
+                <section id="yards-count">10</section>
+            </section>
+        </div>
+        
+    </div>
+    <div id="buttons-football">
+        <button id="start-clock-1">START CLOCK</button>
+        <button id="home-score-six">HOME +6</button>
+        <button id="home-score-one-1">HOME +1</button>
+        <button id="home-score-two-1">HOME +2</button>
+        <button id="home-score-three-1">HOME +3</button>
+        <button id="away-score-six">AWAY +6</button>
+        <button id="away-score-one-1">AWAY +1</button>
+        <button id="away-score-two-1">AWAY +2</button>
+        <button id="away-score-three-1">AWAY +3</button>
+        <button id="period-1">CHANGE PERIOD</button>
+        <button id="downs">ADD DOWN</button>
+        <button id="subtract-yards">SUBTRACT YARDS</button>
+        <button id="add-yards">ADD YARDS</button>
+        <button id="reset-1">RESET</button>
+    </div>
+</body>

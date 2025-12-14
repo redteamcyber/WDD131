@@ -1,0 +1,520 @@
+/* Home Page Mobile */
+header{
+    border: darkslategray 2px solid;
+    background-color: lightslategray;
+    height: 250px;
+}
+
+header img{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-self: center;
+    gap: 0.5em;
+}
+
+header h1{
+    display: flex;
+    justify-self: center;
+}
+
+nav{
+    border: darkslategray 2px solid;
+    background-color: gray;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a{
+    color: black;
+    height: 30;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: darkslategray;
+    color: white;
+}
+
+body{
+    background-color: tan;
+}
+
+#description{
+    border: darkslategray 2px solid;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+h2{
+    display: flex;
+    justify-self: center;
+}
+
+/* --- Scoreboard Container --- */
+#basketball-scoreboard {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px 0;
+    margin: 50px auto 20px; 
+    padding: 20px;
+    width: 850px;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+/* --- Possession/Bonus Indicators (Left and Right) --- */
+
+#home-poss-bonus,
+#away-poss-bonus {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+}
+
+#home-poss-bonus {
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+#away-poss-bonus {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.indicator-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.possession {
+    /* Triangle shape for possession */
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid red;
+    margin-top: 5px;
+}
+
+.possession {
+    opacity: 0;
+}
+
+.possession.active {
+    opacity: 1;
+}
+
+.bonus {
+    width: 25px;
+    height: 15px;
+    background-color: #2A2A28;
+    border: 1px solid #2A2A28;
+    margin-top: 5px;
+}
+
+.bonus.active {
+    background-color: #F8D800;
+}
+
+/* --- Clock Section --- */
+
+#game-clock-basketball {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    background-color: #2A2A28;
+    color: #F8D800;
+    font-size: 4em;
+    font-family: 'Segment Display', monospace;
+    padding: 5px 20px;
+    border-radius: 5px;
+    height: 1.2em;
+    line-height: 1.2em;
+}
+
+/* --- Score/Team Sections --- */
+
+#home-score-team {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#away-score-team {
+    grid-area: 2 / 3 / 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.score {
+    background-color: #2A2A28;
+    color: red;
+    font-size: 5em;
+    font-family: 'Segment Display', monospace;
+    padding: 5px 15px;
+    border-radius: 5px;
+    min-width: 150px;
+    text-align: center;
+    height: 1.2em;
+    line-height: 1.2em;
+}
+
+/* --- Period Section --- */
+
+#game-period-basketball {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.period-label {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#period-number {
+    background-color: #2A2A28;
+    color: #00FF00;
+    font-size: 3em;
+    font-family: 'Segment Display', monospace;
+    padding: 5px 10px;
+    border-radius: 5px;
+    height: 1.2em;
+    line-height: 1.2em;
+}
+
+#buttons-basketball{
+    width: var(--scoreboard-width);
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+}
+#buttons-basketball button {
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#buttons-basketball p{
+    background-color: darkslategray;
+    border: 2px black solid;
+    padding: 10px;
+}
+
+:root {
+    --led-background: #2A2A28;
+    --led-red: #FF0000;
+    --led-amber: #F8D800;
+    --led-green: #00FF00;
+    --scoreboard-width: 900px; 
+}
+
+/* FOOTBALL SCOREBOARD */
+
+#football-scoreboard {
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    margin: 50px auto 20px;
+    padding: 25px;             
+    width: var(--scoreboard-width);
+
+    min-height: 65vh;             
+    max-height: 78vh;           
+
+    box-sizing: border-box;
+    border-radius: 10px;           
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* GAME CLOCK */
+
+#game-clock-football {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    background-color: var(--led-background);
+    color: var(--led-amber);
+    font-family: 'Segment Display', monospace;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+    padding: 10px 30px;
+    width: 85%;
+
+    text-align: center;
+    border-radius: 6px;
+    line-height: 1.1;
+    text-shadow: 0 0 10px rgba(255, 255, 0, 0.6);
+}
+
+/* TEAM SCORES */
+
+#home-score-team,
+#away-score-team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-label {
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#football-scoreboard .score {
+    background-color: var(--led-background);
+    color: var(--led-red);
+    font-family: 'Segment Display', monospace;
+
+    font-size: clamp(3.5rem, 6vw, 6rem);
+    padding: 6px 16px;
+
+    min-width: 140px;
+    text-align: center;
+    border-radius: 6px;
+    line-height: 1.1;
+
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+/* PERIOD */
+
+#game-period-football {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.period-label {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#period-number-football {
+    background-color: var(--led-background);
+    color: var(--led-green);
+    font-family: 'Segment Display', monospace;
+
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    padding: 6px 14px;
+
+    border-radius: 6px;
+    line-height: 1.1;
+
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* DOWN & YARDS */
+
+#down-yards-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: clamp(30px, 8vw, 90px);
+}
+
+#down,
+#yards-to-go {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#down p,
+#yards-to-go p {
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#down-count,
+#yards-count {
+    background-color: var(--led-background);
+    color: var(--led-amber);
+    font-family: 'Segment Display', monospace;
+
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    padding: 6px 18px;
+
+    border-radius: 6px;
+    line-height: 1.1;
+    min-width: 60px;
+
+    text-align: center;
+    text-shadow: 0 0 6px rgba(255, 255, 0, 0.5);
+}
+
+/* BUTTONS */
+
+#buttons-football {
+    width: min(95vw, var(--scoreboard-width));
+    margin: 10px auto 20px;
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+#buttons-football button {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+
+    /* ---- Shared Width Fix ---- */
+    #basketball-scoreboard,
+    #football-scoreboard,
+    #buttons-basketball,
+    #buttons-football {
+        width: 95%;
+        height: auto;
+    }
+
+    /* ---- Basketball ---- */
+    #basketball-scoreboard {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    #basketball-scoreboard .score {
+        font-size: 4em;
+        min-width: 120px;
+    }
+
+    #basketball-scoreboard #timer {
+        font-size: 3em;
+    }
+
+    #period-number {
+        font-size: 2.5em;
+    }
+
+    /* ---- Football ---- */
+    #football-scoreboard .score {
+        font-size: 6em;
+        min-width: 160px;
+    }
+
+    #football-scoreboard #timer {
+        font-size: 5em;
+        width: 90%;
+    }
+
+    #down-count,
+    #yards-count {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* ---- Basketball Mobile Layout ---- */
+    #basketball-scoreboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        gap: 15px;
+        height: auto;
+    }
+
+    #home-poss-bonus,
+    #away-poss-bonus,
+    #game-clock-basketball,
+    #home-score-team,
+    #away-score-team,
+    #game-period-basketball {
+        grid-area: auto;
+    }
+
+    #basketball-scoreboard .score {
+        font-size: 3em;
+        min-width: 100px;
+    }
+
+    #basketball-scoreboard #timer {
+        font-size: 2.2em;
+    }
+
+    #period-number {
+        font-size: 2em;
+    }
+
+    /* ---- Football Mobile Layout ---- */
+    #football-scoreboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        height: auto;
+    }
+
+    #game-clock-football,
+    #home-score-team,
+    #away-score-team,
+    #game-period-football,
+    #down-yards-container {
+        grid-area: auto;
+    }
+
+    #football-scoreboard .score {
+        font-size: 4em;
+        min-width: 120px;
+    }
+
+    #football-scoreboard #timer {
+        font-size: 3.5em;
+        width: 75%;
+    }
+
+    #down-yards-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #down-count,
+    #yards-count {
+        font-size: 2.5em;
+    }
+}
